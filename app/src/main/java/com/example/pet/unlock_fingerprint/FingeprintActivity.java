@@ -73,7 +73,7 @@ public class FingeprintActivity extends AppCompatActivity {
                     generateKey();
                     if (cipherInit()) {
                         FingerprintManager.CryptoObject cryptoObject = new FingerprintManager.CryptoObject(cipher);
-//                        FingerprintHandler  fingerprintHandler = new FingerprintHandler (this);
+//                        FingerprintHandler fingerprintHandler = new FingerprintHandler(this);
 //                        helper.startAuth(fingerprintManager, cryptoObject);
                     }
                 }
@@ -107,6 +107,7 @@ public class FingeprintActivity extends AppCompatActivity {
             throw new RuntimeException(e);
         }
     }
+
     @TargetApi(Build.VERSION_CODES.M)
     public boolean cipherInit() {
         try {
