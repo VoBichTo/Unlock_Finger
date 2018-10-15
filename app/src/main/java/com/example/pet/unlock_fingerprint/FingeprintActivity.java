@@ -73,8 +73,8 @@ public class FingeprintActivity extends AppCompatActivity {
                     generateKey();
                     if (cipherInit()) {
                         FingerprintManager.CryptoObject cryptoObject = new FingerprintManager.CryptoObject(cipher);
-//                        FingerprintHandler fingerprintHandler = new FingerprintHandler(this);
-//                        helper.startAuth(fingerprintManager, cryptoObject);
+                        FingerprintHandler fingerprintHandler = new FingerprintHandler(this);
+                        fingerprintHandler.startAuth(fingerprintManager, cryptoObject);
                     }
                 }
             }
